@@ -54,3 +54,4 @@ USE Northwind;
 --ON O.OrderID = OD.OrderID
 --GROUP BY O.OrderID
 --ORDER BY MAX((UnitPrice * Quantity)*(1-Discount)) DESC
+

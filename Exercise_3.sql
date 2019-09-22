@@ -32,8 +32,8 @@ USE Sparta_Global;
 --SELECT CourseName AS 'Course Name',
 --StartDate AS 'Start Date',
 --EndDate AS 'End Date', 
---CASE 
---WHEN CN.CourseID=1 THEN DATEADD(dd, 56, StartDate)
+--CASE --Case added to define a new column that will contain a check for the end date
+--WHEN CN.CourseID=1 THEN DATEADD(dd, 56, StartDate) --
 --ELSE DATEADD(dd, 84, StartDate)
 --END AS 'Check Date',
 --AcademyName AS 'Academy Name', 
