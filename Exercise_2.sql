@@ -1,6 +1,10 @@
 --CREATE DATABASE Sparta_Global_Test;
 USE Sparta_Global_Test;
 
+--2.1
+--Executed on a piece of paper
+
+--2.2
 CREATE TABLE CourseName 
 --Creates the CourseName Table
 (
@@ -198,6 +202,7 @@ ADD CONSTRAINT FK_CourseID
 FOREIGN KEY (CourseID) REFERENCES CourseName(CourseID)
 --Give it a FK
 
+--2.3
 INSERT INTO Trainer
 (TrainerName)
 VALUES 
@@ -263,14 +268,14 @@ VALUES
 ('Rory Stokes', 3), 
 ('Sharik Gurung', 3), 
 ('Vinuzan Ratnasingam', 3), 
-('Vishnu Jeyarathnam', 3) --Using CourseID as '12' because that is the autoassigned key given to that course, after I made various mistakes in set up and deleted several other course entries which took up the IDs 3 to 11.
---In re-implementation, this courseID value would likely be '3', not '12'.
+('Vishnu Jeyarathnam', 3) --Using CourseID as '3' because that is the autoassigned key given to that course, after I made various mistakes in trial and set up, deleted several other course entries which took up the other IDs...
+--In re-implementation, this courseID value could possibly be a different value, if mistakes were made somewhere down the line.
 --Adding the new Spartan data so that we can separate new Engineering 42 students from older ones, they are on a different course in a new building.
 
-SELECT * FROM CourseName
-SELECT * FROM Spartans 
-SELECT * FROM Academy
-SELECT * FROM RoomName
-SELECT * FROM StartDate
-SELECT * FROM EndDate
-SELECT * FROM Trainer 
+--SELECT * FROM CourseName
+--SELECT * FROM Spartans 
+--SELECT * FROM Academy
+--SELECT * FROM RoomName
+--SELECT * FROM StartDate
+--SELECT * FROM EndDate
+--SELECT * FROM Trainer 
