@@ -1,0 +1,50 @@
+USE Sparta_Global;
+
+--3.1
+--SELECT CourseName AS 'Course Name', StartDate AS 'Start Date', EndDate AS 'End Date', AcademyName AS 'Academy Name', RoomNumber AS 'Room Name', TrainerName AS 'Trainer', SpartanName AS 'Spartan'
+--FROM CourseName CN
+--JOIN StartDate SD ON CN.StartDateID=SD.StartDateID
+--JOIN EndDate ED ON CN.EndDateID=ED.EndDateID
+--JOIN Academy A ON CN.AcademyID=A.AcademyID
+--JOIN RoomName RN ON RN.RoomID=CN.RoomID
+--JOIN Trainer T ON T.TrainerID=CN.TrainerID
+--JOIN Spartans S ON S.CourseID=CN.CourseID
+--WHERE CourseName != 'Engineering 42' --this eradicates all of the new data added about class of engineering 42.
+
+--3.2
+--SELECT CourseName AS 'Course Name', 
+--StartDate AS 'Start Date', 
+--EndDate AS 'End Date', 
+--AcademyName AS 'Academy Name', 
+--RoomNumber AS 'Room Name', 
+--TrainerName AS 'Trainer', 
+--SUBSTRING(SpartanName, 1, 1) + ' ' + SUBSTRING(SpartanName, CHARINDEX(' ',SpartanName)+1, 1) AS 'Spartan Initials'
+--FROM CourseName CN
+--JOIN StartDate SD ON CN.StartDateID=SD.StartDateID
+--JOIN EndDate ED ON CN.EndDateID=ED.EndDateID
+--JOIN Academy A ON CN.AcademyID=A.AcademyID
+--JOIN RoomName RN ON RN.RoomID=CN.RoomID
+--JOIN Trainer T ON T.TrainerID=CN.TrainerID
+--JOIN Spartans S ON S.CourseID=CN.CourseID
+--WHERE CourseName != 'Engineering 42' --this eradicates all of the new data added about class of engineering 42.
+
+--3.3
+--SELECT CourseName AS 'Course Name',
+--StartDate AS 'Start Date',
+--EndDate AS 'End Date', 
+--CASE 
+--WHEN CN.CourseID=1 THEN DATEADD(dd, 56, StartDate)
+--ELSE DATEADD(dd, 84, StartDate)
+--END AS 'Check Date',
+--AcademyName AS 'Academy Name', 
+--RoomNumber AS 'Room Name', 
+--TrainerName AS 'Trainer', 
+--SpartanName AS 'Spartan Name'
+--FROM CourseName CN
+--JOIN StartDate SD ON CN.StartDateID=SD.StartDateID
+--JOIN EndDate ED ON CN.EndDateID=ED.EndDateID
+--JOIN Academy A ON CN.AcademyID=A.AcademyID
+--JOIN RoomName RN ON RN.RoomID=CN.RoomID
+--JOIN Trainer T ON T.TrainerID=CN.TrainerID
+--JOIN Spartans S ON S.CourseID=CN.CourseID
+--WHERE CourseName != 'Engineering 42' --this eradicates all of the new data added about class of engineering 42.
