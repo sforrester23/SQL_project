@@ -5,7 +5,7 @@ USE Sparta_Global_Test;
 
 --4.2
 ALTER TABLE Trainer 
-ADD TrainerType VARCHAR(1) CHECK (TrainerType IN ('T', 'A'))
+ADD TrainerType VARCHAR(1) CHECK (TrainerType IN ('T','A'))
 --Add a new column for trainer type and make it so it can only be valued as T or A for Trainer or Assisstant.
 
 UPDATE Trainer
@@ -19,7 +19,7 @@ ADD EmployeeType VARCHAR(1) CHECK (EmployeeType IN ('S','T'))
 --This list is not necessarily practical unless other data points are added that are non-spartans.
 
 UPDATE Spartans
-SET EmployeeType = 'S'
+SET EmployeeType='S'
 WHERE SpartanID>0
 --Set all spartans to have employee type 'S'.
 

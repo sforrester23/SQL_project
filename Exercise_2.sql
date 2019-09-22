@@ -1,8 +1,9 @@
---CREATE DATABASE Sparta_Global_Test;
+CREATE DATABASE Sparta_Global_Test;
+
 USE Sparta_Global_Test;
 
 --2.1
---Executed on a piece of paper
+--Executed on a piece of paper - visualisation of how tables link together.
 
 --2.2
 CREATE TABLE CourseName 
@@ -226,7 +227,7 @@ VALUES
 ('Sharik Gurung', 2), 
 ('Vinuzan Ratnasingam', 2), 
 ('Vishnu Jeyarathnam', 2)
---Add Engineering42 to the spartans list under Engineering general course
+--Add Engineering42 to the spartans list under Engineering general course, CourseID=2.
 
 INSERT INTO StartDate
 (StartDate)
@@ -271,11 +272,4 @@ VALUES
 ('Vishnu Jeyarathnam', 3) --Using CourseID as '3' because that is the autoassigned key given to that course, after I made various mistakes in trial and set up, deleted several other course entries which took up the other IDs...
 --In re-implementation, this courseID value could possibly be a different value, if mistakes were made somewhere down the line.
 --Adding the new Spartan data so that we can separate new Engineering 42 students from older ones, they are on a different course in a new building.
-
---SELECT * FROM CourseName
---SELECT * FROM Spartans 
---SELECT * FROM Academy
---SELECT * FROM RoomName
---SELECT * FROM StartDate
---SELECT * FROM EndDate
---SELECT * FROM Trainer 
+ 
